@@ -1,0 +1,27 @@
+{
+  "name": "ar-rasyidin-site",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:html": "vite build --mode offline --outDir .offline-build --emptyOutDir && node scripts/single-file.mjs .offline-build single ../Ar-Rasyidin-Academy.html && rm -rf .offline-build",
+    "build:zip": "vite build --mode offline --outDir .offline-build --emptyOutDir && node scripts/single-file.mjs .offline-build folder ../Ar-Rasyidin-Academy && rm -rf .offline-build && cd .. && rm -f Ar-Rasyidin-Academy.zip && zip -qr Ar-Rasyidin-Academy.zip Ar-Rasyidin-Academy"
+  },
+  "dependencies": {
+    "@fontsource/anek-telugu": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/plus-jakarta-sans": "^5.3.0",
+    "@fontsource/urbanist": "^5.3.0",
+    "framer-motion": "^11.18.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "vite": "^5.4.21"
+  }
+}
